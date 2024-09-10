@@ -1,0 +1,84 @@
+diff --git a/src/components/portfolio/Portfolio.jsx b/src/components/portfolio/Portfolio.jsx
+--- a/src/components/portfolio/Portfolio.jsx
++++ b/src/components/portfolio/Portfolio.jsx
+@@ -20,1 +20,1 @@
+-        <span className="work__item" onClick={() => setItems(Menu)}>All</span>
++        <span className="work__item" onClick={function() { return setItems(Menu) }}>All</span>
+@@ -21,1 +21,1 @@
+-        <span className="work__item" onClick={() => filterItem("Landing")}>Landing</span>
++        <span className="work__item" onClick={function() { return filterItem("Landing") }}>Landing</span>
+@@ -22,1 +22,1 @@
+-        <span className="work__item" onClick={() => filterItem("Dashboard")}>Dashboard</span>
++        <span data-test-id="FRbbO6vvOvpEUZ4clFAHG" className="work__item" onClick={() => filterItem("Dashboard")}>Dashboard</span>
+@@ -23,1 +23,1 @@
+-        <span className="work__item" onClick={() => filterItem("React")}>React</span>
++        <span className="work__item" onClick={function() { return filterItem("React") }}>React</span>
+diff --git a/src/components/sidebar/Sidebar.jsx b/src/components/sidebar/Sidebar.jsx
+--- a/src/components/sidebar/Sidebar.jsx
++++ b/src/components/sidebar/Sidebar.jsx
+@@ -13,1 +13,1 @@
+-      <aside className={`${mode} ${show}`} >
++      <aside className={""+mode+" "+show} >
+@@ -22,1 +22,1 @@
+-                  <a href="#home" className={`${mode} nav__link`}>
++                  <a href="#home" className={""+mode+" nav__link"}>
+@@ -27,1 +27,1 @@
+-                  <a href="#about" className={`${mode} nav__link`}>
++                  <a href="#about" className={""+mode+" nav__link"}>
+@@ -32,1 +32,1 @@
+-                  <a href="#resume" className={`${mode} nav__link`}>
++                  <a href="#resume" className={""+mode+" nav__link"}>
+@@ -37,1 +37,1 @@
+-                  <a href="#portfolio" className={`${mode} nav__link`}>
++                  <a href="#portfolio" className={""+mode+" nav__link"}>
+@@ -42,1 +42,1 @@
+-                  <a href="#contact" className={`${mode} nav__link`}>
++                  <a href="#contact" className={""+mode+" nav__link"}>
+@@ -54,1 +54,1 @@
+-      <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={()=> showMenu(!toggle)}>
++      <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={function() { return showMenu(!toggle) }}>
+diff --git a/src/components/resume/Card.jsx b/src/components/resume/Card.jsx
+--- a/src/components/resume/Card.jsx
++++ b/src/components/resume/Card.jsx
+@@ -2,1 +2,1 @@
+-import Data from './Data'
++
+diff --git a/src/components/about/About.jsx b/src/components/about/About.jsx
+--- a/src/components/about/About.jsx
++++ b/src/components/about/About.jsx
+@@ -32,1 +32,1 @@
+-                    <i class="fa-brands fa-html5 html5"></i>
++                    <i className="fa-brands fa-html5 html5"></i>
+@@ -35,1 +35,1 @@
+-                    <i class="fa-brands fa-css3-alt css"></i>
++                    <i className="fa-brands fa-css3-alt css"></i>
+@@ -38,1 +38,1 @@
+-                    <i class="fa-brands fa-bootstrap bootstrap"></i>
++                    <i className="fa-brands fa-bootstrap bootstrap"></i>
+@@ -41,1 +41,1 @@
+-                    <i class="fa-brands fa-js js"></i>
++                    <i className="fa-brands fa-js js"></i>
+@@ -44,1 +44,1 @@
+-                    <i class="fa-brands fa-react react"></i>
++                    <i className="fa-brands fa-react react"></i>
+@@ -47,1 +47,1 @@
+-                    <i class="fa-brands fa-figma figma"></i>
++                    <i className="fa-brands fa-figma figma"></i>
+@@ -50,1 +50,1 @@
+-                    <i class="fa-brands fa-git-alt git"></i>
++                    <i className="fa-brands fa-git-alt git"></i>
+@@ -53,1 +53,1 @@
+-                    <i class="fa-brands fa-github github"></i>
++                    <i className="fa-brands fa-github github"></i>
+diff --git a/src/App.jsx b/src/App.jsx
+--- a/src/App.jsx
++++ b/src/App.jsx
+@@ -14,1 +14,1 @@
+-    setDarkMode(prevMode => !prevMode)
++    setDarkMode(function(prevMode) { return !prevMode })
+@@ -19,1 +19,1 @@
+-      <div className={darkMode ? "icon-darkmode light" :"icon-darkmode dark"} onClick={toggleDarkMode}>
++      <div data-test-id="a-VKZvrHyi9LRbQhfEhBI" className={darkMode ? "icon-darkmode light" :"icon-darkmode dark"} onClick={toggleDarkMode}>
+@@ -20,1 +20,1 @@
+-        {darkMode ? <i class="fa-solid fa-moon moon"></i> : <i class="fa-solid fa-sun sun"></i>}
++        {darkMode ? <i className="fa-solid fa-moon moon"></i> : <i class="fa-solid fa-sun sun"></i>}
